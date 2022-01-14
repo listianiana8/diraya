@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" integrity="sha256-tBxlolRHP9uMsEFKVk+hk//ekOlXOixLKvye5W2WR5c=" crossorigin="anonymous" />
+		<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe" rel="stylesheet" type="text/css">
+
+		<style type="text/css">
+			html,body{font-family:"Open Sans",Arial,sans-serif;font-size:14px;font-weight:400;background:#f3f3f3 url(https://cdn.scribbr.com/wp-content/uploads//2020/02/r-multiple-linear-regression-summary-output.png
+) no-repeat center center fixed;background-size:cover;height:100%}#title{font-family:"Mr Dafoe",Times,serif;font-size:34px;background:rgba(255,255,255,.8);margin-bottom:34px}.header{padding-bottom:13px;margin-bottom:13px;border-bottom:1px solid #eee}a{color:#26ADE4;text-decoration:none}#title a{color:#333;margin-left:21px}#title a:hover{text-decoration:none;color:#26ADE4}.sidebar ul{margin:0;padding:0}.sidebar ul li{list-style:none}.footer{margin-top:21px;padding-top:13px;border-top:1px solid #eee}.footer a{margin:0 15px}.navi{margin:13px 0 13px 0;padding:13px}.navi a{margin:5px 2px;font-size:95%}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}.v-cover{height: 380px; object-fit: cover;}.v-image{height: 200px; object-fit: cover;}.dwn-cover{max-height: 460px; object-fit: cover;}.main{margin-top: 6rem;}.form-inline .form-control{min-width: 300px;}			
+		</style>
+
+		<title>Multiple Regression Model</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "James"
+  },
+  "headline": "Multiple Regression Model",
+  "datePublished": "2022-01-14",
+  "image": [https://image3.slideserve.com/5513308/multivariate-regression-model-l.jpg,https://miro.medium.com/max/654/1*UG5Tb19HVj__78ifl37P3g.png,https://miro.medium.com/max/831/1*39FkA9sgT6E_txFT_KANjw.png],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=multiple regression model",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+		<!-- Head tag Code -->	</head>
+	<body>
+		<header class="bg-white fixed-top">			
+			<nav class="navbar navbar-light bg-white mb-0">
+				<div class="container justify-content-center justify-content-sm-between">	
+				  <a href="/" title="Blog" class="navbar-brand mb-1">Blog</a>
+				  				</div>			  
+			</nav>				
+		</header>
+		<main class="main container bg-white">
+			<div class="col-md-12 my-4" align="center">
+				<div class="d-block p-4">
+	<br/><center>
+<script type='text/javascript' src='https://zaline.diraya.my.id/300-1.js'></script></center><br/>
+</div>			</div>
+			<div class="row header">
+				<div class="col-sm-12 text-center p-2">
+						<h1>Multiple Regression Model</h1>
+
+	
+	<div class="navi text-center">
+										<a class="badge badge-danger" href="/uber-driver-pay.html">uber driver pay</a>
+											<a class="badge badge-light" href="/inno-share-price.html">inno share price</a>
+											<a class="badge badge-warning" href="/poslaju-kuala-terengganu-kuala-terengganu-malaysia.html">poslaju kuala terengganu kuala terengganu malaysia</a>
+											<a class="badge badge-info" href="/pejabat-kesihatan-daerah-sepang.html">pejabat kesihatan daerah sepang</a>
+											<a class="badge badge-info" href="/buah-rendah-kalori.html">buah rendah kalori</a>
+											<a class="badge badge-warning" href="/pulau-ketam-seafood.html">pulau ketam seafood</a>
+											<a class="badge badge-dark" href="/pejabat-buruh-johor-bahru.html">pejabat buruh johor bahru</a>
+											<a class="badge badge-light" href="/hospital-sungai-buloh-waktu-melawat.html">hospital sungai buloh waktu melawat</a>
+											<a class="badge badge-light" href="/bulan-puasa-2017-malaysia.html">bulan puasa 2017 malaysia</a>
+											<a class="badge badge-dark" href="/little-giraffe-book-club.html">little giraffe book club</a>
+											<a class="badge badge-light" href="/trust-in-malay.html">trust in malay</a>
+											<a class="badge badge-danger" href="/what-is-scope-of-study.html">what is scope of study</a>
+											<a class="badge badge-success" href="/usd-currency-converter.html">usd currency converter</a>
+											<a class="badge badge-warning" href="/waktu-maghrib-gombak.html">waktu maghrib gombak</a>
+											<a class="badge badge-dark" href="/discovery-park-gamuda-cove.html">discovery park gamuda cove</a>
+						</div>
+<center>
+	<script type='text/javascript' src='https://zaline.diraya.my.id/320-1.js'></script>
+		
+	</center>
+					
+				</div>
+			</div>
+			<div class="row content mb-4">
+				<div class="col-md-12">					
+					
+	
+	<div class="card-columns">
+						
+	  <div class='card'>
+	  	<a href="https://image.slideserve.com/854109/multiple-linear-regression-l.jpg" data-lightbox="roadtrip" data-title="Ppt Multiple Linear Regression Powerpoint Presentation Free Download Id 854109">
+						<img class="card-img" src="https://image.slideserve.com/854109/multiple-linear-regression-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZGyDu1r3feQqUpkiosmQCe5uaM3K9d2Na9easn1YXsFgOGnvEGKaQrS3J8plyso3WwqY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt Multiple Linear Regression Powerpoint Presentation Free Download Id 854109
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.jmp.com/en_hk/statistics-knowledge-portal/what-is-multiple-regression/fitting-multiple-regression-model/_jcr_content/par/styledcontainer_2069/par/lightbox_4130/lightboxImage.img.png/1548704005203.png" data-lightbox="roadtrip" data-title="Fitting The Multiple Linear Regression Model Introduction To Statistics Jmp">
+						<img class="card-img" src="https://www.jmp.com/en_hk/statistics-knowledge-portal/what-is-multiple-regression/fitting-multiple-regression-model/_jcr_content/par/styledcontainer_2069/par/lightbox_4130/lightboxImage.img.png/1548704005203.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpQWEW3UnxzjmqdZ6rpRm_cQL89Zd3-W477v2-FzUVV4q1A9_sUNj6Do_Bhc7O5WovFa0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Fitting The Multiple Linear Regression Model Introduction To Statistics Jmp
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/chap14multipleregressionmodelbuilding-171014114559/95/multiple-regression-model-building-4-638.jpg?cb=1508059072" data-lightbox="roadtrip" data-title="Multiple Regression Model Building">
+						<img class="card-img" src="https://image.slidesharecdn.com/chap14multipleregressionmodelbuilding-171014114559/95/multiple-regression-model-building-4-638.jpg?cb=1508059072" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVqXjFRVIEQ21BKELAwRu__Lnoo8gnHeFYyyZ-afzWFwhLj-vU7EfrNHRWwms6dL4wbQM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Regression Model Building
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Goran-Sporis/publication/236866418/figure/tbl3/AS:613994469535756@1523399097881/Multiple-linear-regression-models-between-physical-activity-and-functional-fitness.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression Models Between Physical Activity And Download Table">
+						<img class="card-img" src="https://www.researchgate.net/profile/Goran-Sporis/publication/236866418/figure/tbl3/AS:613994469535756@1523399097881/Multiple-linear-regression-models-between-physical-activity-and-functional-fitness.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKBr_K-bO6zE0CPZdSJeN8IsOKFXGlPl6yWBB-mlsYFH7cv_LBPkqliAA22fNgUnUbcwM';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression Models Between Physical Activity And Download Table
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.corporatefinanceinstitute.com/assets/multiple-linear-regression.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression Overview Formula How It Works">
+						<img class="card-img" src="https://cdn.corporatefinanceinstitute.com/assets/multiple-linear-regression.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1_hqcegCSq4e7SBy0qZvebHh7OmNKnViuW2IQK6x5_ybW5D1YZbzIMMMnhdNXYfxxOI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression Overview Formula How It Works
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.spss-tutorials.com/img/spss-multiple-regression-tutorial-model-summary.png" data-lightbox="roadtrip" data-title="Spss Multiple Regression Analysis In 6 Simple Steps">
+						<img class="card-img" src="https://www.spss-tutorials.com/img/spss-multiple-regression-tutorial-model-summary.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0IONJkMQ4dlYG2AMvd6xOpWpNN4mztxXAuUzvG8THUq70y_RQ0K-pgho6HO5PdWyHrmU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Spss Multiple Regression Analysis In 6 Simple Steps
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+				<div class='card'>	
+			<div class="d-block p-4">
+	
+</div>		  	
+		  	<h3 class="h6 p-2"><b></b></h3>
+					</div>
+		
+						
+	  <div class='card'>
+	  	<a href="https://slidetodoc.com/presentation_image_h/c9360a3661214d6a6b66cb7a4c58a493/image-6.jpg" data-lightbox="roadtrip" data-title="Multiple Linear Regression N Multiple Regression Model N">
+						<img class="card-img" src="https://slidetodoc.com/presentation_image_h/c9360a3661214d6a6b66cb7a4c58a493/image-6.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmeL88NN9LHnCXCsCogSirXz3lpoSln1vjUbjyNVyMLgwKXk_kUb2foVHV7QwgGZl4wxo';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression N Multiple Regression Model N
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/654/1*UG5Tb19HVj__78ifl37P3g.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression Explained By Davuluri Hemanth Chowdary Analytics Vidhya Medium">
+						<img class="card-img" src="https://miro.medium.com/max/654/1*UG5Tb19HVj__78ifl37P3g.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd3u_Jk3GLXm5GHS6kunjtdEZB3_PusnBnbyTp__7zunsm7PlQ0l5R7CnCP2PYyn_Uhe8';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression Explained By Davuluri Hemanth Chowdary Analytics Vidhya Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://images0.cnblogs.com/blog/93867/201501/171239381366291.png" data-lightbox="roadtrip" data-title="Multiple Regression Fangwenyu 博客园">
+						<img class="card-img" src="https://images0.cnblogs.com/blog/93867/201501/171239381366291.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhJSc5WX1W7lVM8T0jWm6tEPJgKlLUMml4noKce9Lpv6RAqnrn1ZrL6ispjIDvJw7auI';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Regression Fangwenyu 博客园
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/chap14multipleregressionmodelbuilding-171014114559/95/multiple-regression-model-building-3-638.jpg?cb=1508059072" data-lightbox="roadtrip" data-title="Multiple Regression Model Building">
+						<img class="card-img" src="https://image.slidesharecdn.com/chap14multipleregressionmodelbuilding-171014114559/95/multiple-regression-model-building-3-638.jpg?cb=1508059072" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS72AwcvS_7CN7WVJvJPS7uRbzEXZ5NwTTr8PRwRDKAm1rZi2Wv67nVvtFdW9Pwe0_snmc';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Regression Model Building
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/1838/1*uLHXR8LKGDucpwUYHx3VaQ.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression Using Python By Manja Bogicevic Medium">
+						<img class="card-img" src="https://miro.medium.com/max/1838/1*uLHXR8LKGDucpwUYHx3VaQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvPfO6z1rim852DY6p7VHbeD__m6sHGUSKMl71F6CQ0Fmn6LhwkvYRqPnrtXgZSlg7kU';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression Using Python By Manja Bogicevic Medium
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/831/1*39FkA9sgT6E_txFT_KANjw.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression For Manufacturing Analysis">
+						<img class="card-img" src="https://miro.medium.com/max/831/1*39FkA9sgT6E_txFT_KANjw.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRriRbjsHaNSMhVq4ucJjbt25xfifU_AULbYp1wGUFqZPYNQ1U3CROSn0F3DHFRs8AGYw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression For Manufacturing Analysis
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://statistics.laerd.com/spss-tutorials/img/mr/table-coefficients-highlighted-b-only.png" data-lightbox="roadtrip" data-title="How To Perform A Multiple Regression Analysis In Spss Statistics Laerd Statistics">
+						<img class="card-img" src="https://statistics.laerd.com/spss-tutorials/img/mr/table-coefficients-highlighted-b-only.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqOCIX1RylY_tfGOpdDSKcT2lxMFJTXO1ItHdGJoKvoP29vbxv30JySUUTXOYIaW5Rw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				How To Perform A Multiple Regression Analysis In Spss Statistics Laerd Statistics
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image3.slideserve.com/5513308/multivariate-regression-model-l.jpg" data-lightbox="roadtrip" data-title="Ppt Multivariate Regression Model Powerpoint Presentation Free Download Id 5513308">
+						<img class="card-img" src="https://image3.slideserve.com/5513308/multivariate-regression-model-l.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQlPMUJe2qNh7Tf0DPasYRV6zyZqz2CrQ89t1WM_kEAz9Pikcpbwe46s8MAYZZkuEW7TA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt Multivariate Regression Model Powerpoint Presentation Free Download Id 5513308
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Rob-Vreeken/publication/233873994/figure/tbl2/AS:667806190280713@1536228811415/R-2-of-Multiple-Linear-Regression-Models-Adjusted-for-Variables.png" data-lightbox="roadtrip" data-title="R 2 Of Multiple Linear Regression Models Adjusted For Variables Download Table">
+						<img class="card-img" src="https://www.researchgate.net/profile/Rob-Vreeken/publication/233873994/figure/tbl2/AS:667806190280713@1536228811415/R-2-of-Multiple-Linear-Regression-Models-Adjusted-for-Variables.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkLHlEpU7uNAgWqarml_Yw_GGTUGGf8ATllL-buuKnlMZQsyXESjZTkuY1jAmtTMTCnL0';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				R 2 Of Multiple Linear Regression Models Adjusted For Variables Download Table
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.scribbr.com/wp-content/uploads//2020/02/r-multiple-linear-regression-summary-output.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression A Quick And Simple Guide">
+						<img class="card-img" src="https://cdn.scribbr.com/wp-content/uploads//2020/02/r-multiple-linear-regression-summary-output.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScmueKRuwBPvBcvtbKtWgrM6g4joJQ3T8mmi_mXEvvwXwMJzQjwMoS7xbn1GHMn3I1H90';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression A Quick And Simple Guide
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://slideplayer.com/4906282/16/images/slide_1.jpg" data-lightbox="roadtrip" data-title="Multiple Linear Regression Model Ppt Video Online Download">
+						<img class="card-img" src="https://slideplayer.com/4906282/16/images/slide_1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR43Gedvh1sLsl458j_xRR_1XRzrE0TyP4upzmHXKff7zjsGqfJRPQPdzMAnSawlWsvl4A';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression Model Ppt Video Online Download
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://d3i71xaburhd42.cloudfront.net/9d46345842ccc1028319fb6c2b3dce6ff9920fb4/4-Figure1-1.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression Model Of Rice Production Using Conjugate Gradient Methods Semantic Scholar">
+						<img class="card-img" src="https://d3i71xaburhd42.cloudfront.net/9d46345842ccc1028319fb6c2b3dce6ff9920fb4/4-Figure1-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZQysIdAdsVkUsJ3k-fCT6YqNt83peKHi62sQBsWILUrhy5kx7-97WVuIoM8jKE6Udv9M';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression Model Of Rice Production Using Conjugate Gradient Methods Semantic Scholar
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://i.pinimg.com/originals/7b/b6/f4/7bb6f446f6081fa48ad12458c9d616e3.png" data-lightbox="roadtrip" data-title="Figure 1 Hierarchical Diagram Of A Multiple Linear Regression Model With Three Linear Regression Regression Regression Analysis">
+						<img class="card-img" src="https://i.pinimg.com/originals/7b/b6/f4/7bb6f446f6081fa48ad12458c9d616e3.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Ie3sPpBavY3J23bYIybNRNwVRzg_HvjCnzLgMybdS7hmZT_6lRO8yD-_0aFRZc7tfKw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Figure 1 Hierarchical Diagram Of A Multiple Linear Regression Model With Three Linear Regression Regression Regression Analysis
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/proxy/1*YuFr0H7derrXFRFJjCa2QQ.png" data-lightbox="roadtrip" data-title="Data Science Simplified Part 5 Multivariate Regression Models By Pradeep Menon Towards Data Science">
+						<img class="card-img" src="https://miro.medium.com/proxy/1*YuFr0H7derrXFRFJjCa2QQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-TWJjuK1NzgXJVwx1axRVCKggR0Mit9NSMfHp0RxzYKCDjiiKfDE-I1k4CQeuMWIkzY';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Data Science Simplified Part 5 Multivariate Regression Models By Pradeep Menon Towards Data Science
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image.slidesharecdn.com/chap12multipleregression-191217015340/95/chap12-multiple-regression-3-638.jpg?cb=1576547661" data-lightbox="roadtrip" data-title="Chap12 Multiple Regression">
+						<img class="card-img" src="https://image.slidesharecdn.com/chap12multipleregression-191217015340/95/chap12-multiple-regression-3-638.jpg?cb=1576547661" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZsEZF9tbWb_6_-w9fEZoGe15YwyE0mOMI1Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Chap12 Multiple Regression
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="http://slidetodoc.com/presentation_image_h/08b2d0f8d0ee129011c5deaa6cda4ae5/image-1.jpg" data-lightbox="roadtrip" data-title="Multiple Regression Analysis Estimation Definition Of The Multiple">
+						<img class="card-img" src="http://slidetodoc.com/presentation_image_h/08b2d0f8d0ee129011c5deaa6cda4ae5/image-1.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0F1Nn4sdGtSX-0MW78ml4mjy0u2ia2ENXhQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Regression Analysis Estimation Definition Of The Multiple
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.jmp.com/en_hk/statistics-knowledge-portal/what-is-multiple-regression/fitting-multiple-regression-model/_jcr_content/par/styledcontainer_2069/par/lightbox_3be9/lightboxImage.img.png/1548704005350.png" data-lightbox="roadtrip" data-title="Fitting The Multiple Linear Regression Model Introduction To Statistics Jmp">
+						<img class="card-img" src="https://www.jmp.com/en_hk/statistics-knowledge-portal/what-is-multiple-regression/fitting-multiple-regression-model/_jcr_content/par/styledcontainer_2069/par/lightbox_3be9/lightboxImage.img.png/1548704005350.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu92VzAbtpfeI4G1h2ZyKB_Q_cPywIu58ICQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Fitting The Multiple Linear Regression Model Introduction To Statistics Jmp
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://image3.slideserve.com/6330599/multiple-regression-n.jpg" data-lightbox="roadtrip" data-title="Ppt Multiple Regression Powerpoint Presentation Free Download Id 6330599">
+						<img class="card-img" src="https://image3.slideserve.com/6330599/multiple-regression-n.jpg" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTEuYJVfs06KwNztQ0MTI2UrXZJB1EvbVFRA';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Ppt Multiple Regression Powerpoint Presentation Free Download Id 6330599
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="/search?q=multiple+linear+regression+graph&amp;tbm=isch" data-lightbox="roadtrip" data-title="3">
+						<img class="card-img" src="/search?q=multiple+linear+regression+graph&amp;tbm=isch" onerror="this.onerror=null;this.src='/search?q=multiple+linear+regression+graph&amp;tbm=isch';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				3
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/541/1*Pc8EZljAb4X5IGyLd_Jvdw.png" data-lightbox="roadtrip" data-title="Simple And Multiple Linear Regression With Python By Amanda Iglesias Moreno Towards Data Science">
+						<img class="card-img" src="https://miro.medium.com/max/541/1*Pc8EZljAb4X5IGyLd_Jvdw.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZvq1SI165vbIRWfJkYHdctNWz3-ia_6blpQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Simple And Multiple Linear Regression With Python By Amanda Iglesias Moreno Towards Data Science
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/38_blog_image_1.png" data-lightbox="roadtrip" data-title="Regression Classification Multiple Linear Regression Blogs Superdatascience Machine Learning Ai Data Science Career Analytics Success">
+						<img class="card-img" src="https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/38_blog_image_1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLvdMhL0WSQoviKDeDMQmnZ4MlFjtLPqZCew';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Regression Classification Multiple Linear Regression Blogs Superdatascience Machine Learning Ai Data Science Career Analytics Success
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://cdn.scribbr.com/wp-content/uploads//2020/02/multiple-regression-in-r-graph-1.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression A Quick And Simple Guide">
+						<img class="card-img" src="https://cdn.scribbr.com/wp-content/uploads//2020/02/multiple-regression-in-r-graph-1.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRljIIj4Uh1mD3Bm5uPloUmf551wst0sYwQHw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression A Quick And Simple Guide
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://miro.medium.com/max/414/1*Ko7YDmTa_TctiL2Fkm-kGQ.png" data-lightbox="roadtrip" data-title="Your Guide To Linear Regression Models Kdnuggets">
+						<img class="card-img" src="https://miro.medium.com/max/414/1*Ko7YDmTa_TctiL2Fkm-kGQ.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsadXTtMymHcqWsr3fmrRFx22bwDbjaSud_g';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Your Guide To Linear Regression Models Kdnuggets
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/440px-Anscombe%27s_quartet_3.svg.png" data-lightbox="roadtrip" data-title="Linear Regression Wikipedia">
+						<img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/440px-Anscombe%27s_quartet_3.svg.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHwRPteCcvEuCuFbJhWXxSQh5-kowbXxZFw';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Linear Regression Wikipedia
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://www.researchgate.net/profile/Jianjun-Wu-3/publication/323291888/figure/tbl2/AS:667766658969620@1536219386918/Multiple-Linear-Regression-Model-Controlled-for-Age-and-Gender-With-the-Beck.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression Model Controlled For Age And Gender With Download Table">
+						<img class="card-img" src="https://www.researchgate.net/profile/Jianjun-Wu-3/publication/323291888/figure/tbl2/AS:667766658969620@1536219386918/Multiple-Linear-Regression-Model-Controlled-for-Age-and-Gender-With-the-Beck.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzvR99bpJivatL2U-2-971y7pjivTEah2zuQ';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression Model Controlled For Age And Gender With Download Table
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://helpfulstats.com/wp-content/uploads/2017/04/Screen-Shot-2017-04-11-at-16.56.17.png" data-lightbox="roadtrip" data-title="How To Build A Multiple Linear Regression Model">
+						<img class="card-img" src="https://helpfulstats.com/wp-content/uploads/2017/04/Screen-Shot-2017-04-11-at-16.56.17.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQoau5QBnp1qMdGTBvlW1TFuXeENekEzySvg';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				How To Build A Multiple Linear Regression Model
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+						
+	  <div class='card'>
+	  	<a href="https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/linear-regression2/Images/f_MLR.png" data-lightbox="roadtrip" data-title="Multiple Linear Regression Using Python">
+						<img class="card-img" src="https://csharpcorner-mindcrackerinc.netdna-ssl.com/article/linear-regression2/Images/f_MLR.png" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmqfs1Ock3Cq2hcwTabuRPTWVC4B1c5tBP8Q';">
+				
+	    </a>
+	    		<p class='blockquote-footer py-1 px-2'>
+			<i>
+				<small class='text-muted'>
+				Multiple Linear Regression Using Python
+				</small>
+			</i>        
+		</p>
+	  </div>
+
+		
+		
+	</div>
+
+		 
+		<div class="d-block mt-4 p-3">
+
+			Source : <a href="https://pinterest.com" rel="nofollow noopener">pinterest.com</a>
+		</div>
+		
+				</div>
+				<div class="col-sm-12 widget">
+					<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>				</div>
+			</div>
+			<div class="row footer">
+				<div class="col-md-12 text-center py-4">
+										<a href="/p/dmca.html">Dmca</a>
+										<a href="/p/contact.html">Contact</a>
+										<a href="/p/privacy-policy.html">Privacy Policy</a>
+										<a href="/p/copyright.html">Copyright</a>
+					
+				</div>
+			</div>
+		</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>
+		
+		<!-- Footer CSS JS -->
+<!-- Statcounter code for 2_mamakamaa https://mamakamaa.blogspot.com/ on Blogger -->
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=12506186; 
+var sc_invisible=1; 
+var sc_security="04fde361"; 
+//]]>
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter_xhtml.js" async></script>
+
+		
+		
+		
+			</body>
+</html>
